@@ -17,14 +17,8 @@ public class ContactServiceImpl
         ContactRepository,
         ContactMapper
         >
-        implements ContactService, UserDetailsService {
+        implements ContactService {
     public ContactServiceImpl(ContactRepository repository, ContactMapper mapper) {
         super(repository, mapper);
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'loadUserByUsername'");
     }
 }
