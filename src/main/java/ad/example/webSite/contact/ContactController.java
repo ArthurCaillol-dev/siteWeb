@@ -9,4 +9,6 @@ public class ContactController extends GenericController<ContactDto,ContactServi
     public ContactController(ContactService service) {
         super(service);
     }
+
+    
 }

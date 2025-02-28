@@ -2,13 +2,10 @@ package ad.example.webSite;
 
 import ad.example.webSite.users.UserController;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.event.EventListener;
 
 
@@ -17,12 +14,12 @@ import org.springframework.context.event.EventListener;
 @ConfigurationPropertiesScan("ad.example.webSite.conf")
 //@Profile("dev") : Utilisable mais pau maintenable
 @RequiredArgsConstructor
-public class RestaurantsApplication {
+public class webSiteApplication {
 
     private final UserController controller;
 
     public static void main(String[] args) {
-        SpringApplication.run(RestaurantsApplication.class, args);
+        SpringApplication.run(webSiteApplication.class, args);
     }
 
     @EventListener
